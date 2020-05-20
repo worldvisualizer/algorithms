@@ -53,9 +53,24 @@ def fibonacci_custom(n, multi):
     return fibs[n]
 
 
+def hamming_distance(string1, string2):
+    """
+        Parameters
+        ----------
+        string1 : str
+        string2 : str
+
+        Returns
+        -------
+        int
+            hamming distance of two strings
+    """
+    dist_counter = 0
+    for n in range(len(string1)):
+        if string1[n] != string2[n]:
+            dist_counter += 1
+    return dist_counter
+
+
 if __name__ == '__main__':
-    print('answer:', fibonacci_custom(33, 4))
-    print('answer:', fibonacci(3))
-    print('answer:', fibonacci(4))
-    print('answer:', fibonacci(5))
-    print('answer:', fibonacci(6))
+    
